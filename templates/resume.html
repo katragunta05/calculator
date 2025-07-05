@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Resume</title>
+  <style>
+    body { font-family: Arial; margin: 40px; background: #f4f4f4; }
+    .container { background: white; padding: 20px; border-radius: 10px; }
+    h1 { border-bottom: 2px solid #000; padding-bottom: 5px; }
+    section { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="name"></h1>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+
+    <section>
+      <h2>Education</h2>
+      <p id="education"></p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p id="skills"></p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <p id="experience"></p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("name").textContent = localStorage.getItem("name");
+    document.getElementById("email").textContent = localStorage.getItem("email");
+    document.getElementById("phone").textContent = localStorage.getItem("phone");
+    document.getElementById("education").textContent = localStorage.getItem("education");
+    document.getElementById("skills").textContent = localStorage.getItem("skills");
+    document.getElementById("experience").textContent = localStorage.getItem("experience");
+  </script>
+</body>
+</html>
